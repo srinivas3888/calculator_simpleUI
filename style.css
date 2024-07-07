@@ -64,7 +64,7 @@ body{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    gap: 3vh;
+    gap: 1.2vh;
     justify-content: center;
     align-items: center;
     top: 26vh;
@@ -92,9 +92,61 @@ body{
 }
 
 /* For small mobile screens */
-@media screen and (max-width:351px) {
+@media screen and (max-width:220px) {
     .main{
-        top: 29vh;
+        top: 46vh;
+    }
+    .row{
+        gap: 5px;
+    }
+    .btn{
+        cursor: pointer;
+        width: 6px;
+        height: 10px;
+        border-radius: 5vw;
+        background-color: rgb(106, 105, 105);
+        color: white;
+        font-size: 1em;
+        padding-left: 10px;
+        padding-right: 3.4vh;
+        padding-top: 1.4vh;
+        padding-bottom: 5.3vh;
+        text-align: center;
+        transition-duration: 0.15s;
+        transition-property: all;
+    }
+    #b1, #b2, #b3{
+        padding-left: 7px;
+        padding-right: 24px;
+        padding-top: 1.4vh;
+        padding-bottom: 5.3vh;
+    }
+    .btn:active{
+        background-color: black;
+    }
+    .result{
+        cursor: text;
+        height: 8vh;
+        width: 96vw;
+        position: relative;
+        border-bottom: 1.3vw solid rgb(144, 144, 244);
+    }
+    #res{
+        height: 8vh;
+        width: 96vw;
+        text-align: end;
+        font-size: 2em;
+        right: 1%;
+        position: relative;
+        padding-bottom: 0px;
+    }
+}
+
+
+/* For medium mobile screens */
+@media screen and (max-width:351px) and (min-width:220px) {
+    .main{
+        top: 36vh;
     }
     .btn{
         cursor: pointer;
