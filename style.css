@@ -83,6 +83,7 @@ body{
 }
 
 /* For small mobile screens */
+/*
 @media screen and (max-width:328px) {
     .main{
         top: 46vh;
@@ -108,8 +109,8 @@ body{
         right: 1%;
     }
 }
-
-@media screen and (max-width:425px) and (min-width:328px) {
+*/
+/*@media screen and (max-width:425px) and (min-width:328px) {*/
     .main{
         top: 46vh;
     }
@@ -133,7 +134,7 @@ body{
         font-size: 2em;
         right: 1%;
     }
-}
+/*}*/
 
 
 /* For medium mobile screens */
