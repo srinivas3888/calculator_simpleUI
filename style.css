@@ -115,11 +115,11 @@ body{
         top: 46vh;
     }
     .row{
-        gap: 0.1em;
+        gap: 0.2em;
     }
     .btn{
         cursor: pointer;
-        width: 4em;
+        width: 4.2em;
         height: 2.8em;
         border-radius: 5vw;
         font-size: 1em;
@@ -130,7 +130,7 @@ body{
     }
     #res{
         height: 6.8vh;
-        width: 9.5em;
+        width: 10em;
         font-size: 2em;
         right: 1%;
     }
