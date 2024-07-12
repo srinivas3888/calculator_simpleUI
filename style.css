@@ -46,104 +46,72 @@ body{
     70%{
         color: aqua;
     }
-    90%{
-        color: deeppink;
-    }
 }
 .fa-solid{
     animation-name: logo;
-    animation-duration: 1.8s;
+    animation-duration: 3.5s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
     transition-property: all;
-    transition-duration: 0.15s;
+    transition-duration: 0.35s;
 }
-.main{
-    position: absolute;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: 1.2vh;
-    justify-content: center;
-    align-items: center;
-    top: 26vh;
-    border-radius: 8px;
+.result, #res{
+    cursor: text;
+    position: relative;
+    text-align: end;
+    font-weight: 500;
+}
+.btn{
+    cursor: pointer;
+    box-shadow: 0px 0px 5px rgb(0, 0, 0);
+    text-align: center;
+    font-weight: 500;
+    transition-duration: 0.15s;
+    transition-property: all;
+    flex-grow: 1;
+}
+.btn:active{
+    color: white;
+    background-color: rgb(109, 107, 107);
 }
 .row{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 1.2vh;
     justify-content: center;
     align-items: center;
 }
-#res{
-    border: none;
-    border-radius: 10px;
-}
-.result{
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgb(200, 198, 198);
-}
-.btn{
-    box-shadow: 0px 0px 3px rgb(0, 0, 0);
-    border: none;
-}
 
 /* For small mobile screens */
-@media screen and (max-width:220px) {
+@media screen and (max-width:320px) {
     .main{
         top: 46vh;
     }
     .row{
-        gap: 5px;
+        gap: 0.1em;
     }
     .btn{
         cursor: pointer;
-        width: 6px;
-        height: 10px;
+        width: 3em;
+        height: 2.6em;
         border-radius: 5vw;
-        background-color: rgb(106, 105, 105);
-        color: white;
         font-size: 1em;
-        padding-left: 10px;
-        padding-right: 3.4vh;
-        padding-top: 1.4vh;
-        padding-bottom: 5.3vh;
         text-align: center;
-        transition-duration: 0.15s;
-        transition-property: all;
-    }
-    #b1, #b2, #b3{
-        padding-left: 7px;
-        padding-right: 24px;
-        padding-top: 1.4vh;
-        padding-bottom: 5.3vh;
-    }
-    .btn:active{
-        background-color: black;
     }
     .result{
-        cursor: text;
-        height: 8vh;
-        width: 96vw;
-        position: relative;
-        border-bottom: 1.3vw solid rgb(144, 144, 244);
+        border-bottom: 1vw solid rgb(144, 144, 244);
     }
     #res{
-        height: 8vh;
-        width: 96vw;
-        text-align: end;
+        height: 6.5vh;
+        width: 7.6em;
         font-size: 2em;
         right: 1%;
-        position: relative;
-        padding-bottom: 0px;
     }
 }
 
 
 /* For medium mobile screens */
+/*
 @media screen and (max-width:351px) and (min-width:220px) {
     .main{
         top: 36vh;
@@ -192,6 +160,7 @@ body{
 }
 
 /* For larger mobile screens */
+/*
 @media screen and (max-width:705px) and (min-width:351px) {
     .main{
         top: 24vh;
@@ -240,6 +209,7 @@ body{
 }
 
 /* For Tablets & Laptops */
+/*
 @media screen and (min-width:705px) {
     .main{
         top: 20px;
@@ -284,3 +254,5 @@ body{
         padding-bottom: 1%;
     }
 }
+
+*/

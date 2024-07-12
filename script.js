@@ -1,27 +1,24 @@
-let result=document.getElementById('res');
+let res=document.getElementById('res');
+let btn=document.querySelectorAll(".btn");
+btn.forEach(button => { button.classList.add('bg-white', 'border-none', 'text-black', 'rounded-xl', 'm-1.5') });
 
-window.addEventListener('load', function(){
-    let loader=document.getElementById('loader');
-    let content=document.getElementsByClassName('main');
-    loader.style.display="none";
-    content.style.opacity="1";
-});
+let main=document.getElementsByClassName('main');
 
 function display(d){
     if(d=='AC'){
-        result.value="";
+        res.value="";
     }
     else if(d=='DE'){
-        let o=result.value, t="";
+        let o=res.value, t="";
         for(let i=0; i<o.length-1; i++){
             t += o[i];
         }
-        result.value=t;
+        res.value=t;
     }
     else if(d=='='){
-        result.value = eval(result.value);
+        res.value = eval(res.value);
     }
     else{
-    result.value += d;
+    res.value += d;
     }
 }
