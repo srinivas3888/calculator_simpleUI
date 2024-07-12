@@ -83,7 +83,7 @@ body{
 }
 
 /* For small mobile screens */
-@media screen and (max-width:320px) {
+@media screen and (max-width:328px) {
     .main{
         top: 46vh;
     }
@@ -92,8 +92,8 @@ body{
     }
     .btn{
         cursor: pointer;
-        width: 3em;
-        height: 2.6em;
+        width: 3.6em;
+        height: 2.8em;
         border-radius: 5vw;
         font-size: 1em;
         text-align: center;
@@ -102,8 +102,34 @@ body{
         border-bottom: 1vw solid rgb(144, 144, 244);
     }
     #res{
-        height: 6.5vh;
-        width: 7.6em;
+        height: 6.8vh;
+        width: 8.6em;
+        font-size: 2em;
+        right: 1%;
+    }
+}
+
+@media screen and (max-width:425px) and (min-width:328px) {
+    .main{
+        top: 46vh;
+    }
+    .row{
+        gap: 0.1em;
+    }
+    .btn{
+        cursor: pointer;
+        width: 4em;
+        height: 2.8em;
+        border-radius: 5vw;
+        font-size: 1em;
+        text-align: center;
+    }
+    .result{
+        border-bottom: 1vw solid rgb(144, 144, 244);
+    }
+    #res{
+        height: 6.8vh;
+        width: 9.5em;
         font-size: 2em;
         right: 1%;
     }
