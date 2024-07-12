@@ -2,53 +2,65 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="author" content="Srinivas_Batthula">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator.abhi</title>
+    <!-- Favicon -->
+    <link rel="icon" href="fav.png" type="image/png">
+    <meta name="theme-color" content="#87CEEB">
+    <!-- Required src's -->
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="script.js" async defer></script>
 </head>
 <body>
-    <div class="logo" style="font-size: 2.5em; color: blue; margin-bottom: 0;">
-        <i class="fa-solid fa-calculator"></i>
-    </div>
+    <!-- Logo -->
+        <div class="logo" style="font-size: 2.5em; color: aqua; margin-bottom: 0; margin-top: 1%; background-color: white; overflow: hidden;">
+            <i class="fa-solid fa-calculator" style="position: relative; display: flex; justify-content: center; margin-bottom: 0.6em;"></i>
+        </div>
+        <div style="font-size: 2.5em; position: relative; display: flex; justify-content: center;">
+            <div style="font-size: 0.6em; font-weight: 600; color: blue; position: absolute; z-index: 0;">Calculator</div>
+            <div id="hid"></div>
+        </div>
+        
+    <!-- Content-block -->
+        <div class="main bottom-0 absolute flex flex-col flex-wrap flex-1 max-w-full justify-center justify-items-center place-content-center place-items-center p-2">
+            <div class="result rounded shadow shadow-black m-1">
+                <input type="text" name="result" id="res" class="rounded-lg border-none text-end" placeholder="0000" disabled>
+            </div>
+            <div class="row">
+                <input type="submit" class="btn" value="AC" id="b1" onclick="display('AC')">
+                <input type="submit" class="btn" value="DE" id="b2" onclick="display('DE')">
+                <input type="submit" class="btn" value="%" onclick="display('%')">
+                <input type="submit" class="btn" value="/" onclick="display('/')">
+            </div>
+            <div class="row">
+                <input type="submit" class="btn" value="7" onclick="display('7')">
+                <input type="submit" class="btn" value="8" onclick="display('8')">
+                <input type="submit" class="btn" value="9" onclick="display('9')">
+                <input type="submit" class="btn" value="*" onclick="display('*')">
+            </div>
+            <div class="row">
+                <input type="submit" class="btn" value="4" onclick="display('4')">
+                <input type="submit" class="btn" value="5" onclick="display('5')">
+                <input type="submit" class="btn" value="6" onclick="display('6')">
+                <input type="submit" class="btn" value="-" onclick="display('-')">
+            </div>
+            <div class="row">
+                <input type="submit" class="btn" value="1" onclick="display('1')">
+                <input type="submit" class="btn" value="2" onclick="display('2')">
+                <input type="submit" class="btn" value="3" onclick="display('3')">
+                <input type="submit" class="btn" value="+" id="b4" onclick="display('+')">
+            </div>
+            <div class="row">
+                <input type="submit" class="btn" value="00" id="b3" onclick="display('00')">
+                <input type="submit" class="btn" value="0" onclick="display('0')">
+                <input type="submit" class="btn" value="." onclick="display('.')">
+                <input type="submit" class="btn" value="=" id="b5" onclick="display('=')">
+            </div>
+        </div>
     
-    <div class="main bottom-0 absolute flex flex-col flex-wrap flex-1 max-w-full justify-center justify-items-center place-content-center place-items-center p-2">
-        <div class="result rounded shadow shadow-black">
-            <input type="text" name="result" id="res" class="rounded-lg border-none text-end text-2xl pr-1" placeholder="0000" disabled>
-        </div>
-        <div class="row">
-            <input type="submit" class="btn" value="AC" id="b1" onclick="display('AC')">
-            <input type="submit" class="btn" value="DE" id="b2" onclick="display('DE')">
-            <input type="submit" class="btn" value="%" onclick="display('%')">
-            <input type="submit" class="btn" value="/" onclick="display('/')">
-        </div>
-        <div class="row">
-            <input type="submit" class="btn" value="7" onclick="display('7')">
-            <input type="submit" class="btn" value="8" onclick="display('8')">
-            <input type="submit" class="btn" value="9" onclick="display('9')">
-            <input type="submit" class="btn" value="*" onclick="display('*')">
-        </div>
-        <div class="row">
-            <input type="submit" class="btn" value="4" onclick="display('4')">
-            <input type="submit" class="btn" value="5" onclick="display('5')">
-            <input type="submit" class="btn" value="6" onclick="display('6')">
-            <input type="submit" class="btn" value="-" onclick="display('-')">
-        </div>
-        <div class="row">
-            <input type="submit" class="btn" value="1" onclick="display('1')">
-            <input type="submit" class="btn" value="2" onclick="display('2')">
-            <input type="submit" class="btn" value="3" onclick="display('3')">
-            <input type="submit" class="btn" value="+" id="b4" onclick="display('+')">
-        </div>
-        <div class="row">
-            <input type="submit" class="btn" value="00" id="b3" onclick="display('00')">
-            <input type="submit" class="btn" value="0" onclick="display('0')">
-            <input type="submit" class="btn" value="." onclick="display('.')">
-            <input type="submit" class="btn" value="=" id="b5" onclick="display('=')">
-        </div>
-    </div>
-    
+        <!-- Required files -->
+    <script src="script.js" async defer></script>
     <script src="https://kit.fontawesome.com/b0cf548c33.js" crossorigin="anonymous"></script>
 </body>
 </html>

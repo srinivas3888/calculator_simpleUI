@@ -2,8 +2,6 @@ let res=document.getElementById('res');
 let btn=document.querySelectorAll(".btn");
 btn.forEach(button => { button.classList.add('bg-white', 'border-none', 'text-black', 'rounded-xl', 'm-1.5') });
 
-let main=document.getElementsByClassName('main');
-
 function display(d){
     if(d=='AC'){
         res.value="";
