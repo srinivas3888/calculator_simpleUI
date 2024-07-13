@@ -68,6 +68,9 @@ body{
     transition-duration: 0.15s;
     transition-property: all;
     flex-grow: 1;
+    position: sticky;
+    box-sizing: content-box;
+    field-sizing: content;
 }
 .btn:hover{
     transform: scale(1.05);
@@ -77,61 +80,21 @@ body{
     background-color: rgb(109, 107, 107);
 }
 .row{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
     align-items: center;
+    overflow: hidden;
 }
 .main{
     object-position: bottom;
+    overflow: hidden;
+    scrollbar-width: none;
 }
 
-@media screen and (max-width:340px) {
+@media screen and (max-width:350px) {
     .row{
         gap: 0.15em;
-    }
-    .btn{
-        cursor: pointer;
-        min-width: 3.36328em;
-        height: 3em;
-        border-radius: 1.2em;
-        font-size: 1em;
-        text-align: center;
-    }
-    #res{
-        height: 6.9vh;
-        max-width: 8.3em;
-        font-size: 2em;
-        right: 2%;
-    }
-}
-
-/* For smaller mobile screens */
-@media screen and (max-width:356px) and (min-width:340px) {
-    .row{
-        gap: 0.15em;
-    }
-    .btn{
-        cursor: pointer;
-        min-width: 4.2em;
-        height: 3em;
-        border-radius: 1.2em;
-        font-size: 1em;
-        text-align: center;
-    }
-    #res{
-        height: 6.9vh;
-        max-width: 9.9em;
-        font-size: 2em;
-        right: 2%;
-    }
-}
-
-/* For mobile, Tablet, Laptop screens */
-@media screen and (min-width:356px) {
-    .row{
-        gap: 0.21em;
     }
     .btn{
         cursor: pointer;
@@ -142,8 +105,50 @@ body{
         text-align: center;
     }
     #res{
+        height: 6.9vh;
+        max-width: 10.15em;
+        font-size: 2em;
+        right: 3%;
+    }
+}
+
+/* For smaller mobile screens */
+@media screen and (max-width:383px) and (min-width:350px) {
+    .row{
+        gap: 0.15em;
+    }
+    .btn{
+        cursor: pointer;
+        width: 5em;
+        height: 3em;
+        border-radius: 1.2em;
+        font-size: 1em;
+        text-align: center;
+    }
+    #res{
         height: 7.1vh;
-        max-width: 10.5em;
+        max-width: 11.4em;
+        font-size: 2em;
+        right: 3%;
+    }
+}
+
+/* For mobile, Tablet, Laptop screens */
+@media screen and (min-width:383px) {
+    .row{
+        gap: 0.21em;
+    }
+    .btn{
+        cursor: pointer;
+        min-width: 5.4em;
+        height: 3em;
+        border-radius: 1.2em;
+        font-size: 1em;
+        text-align: center;
+    }
+    #res{
+        height: 7.6vh;
+        max-width: 12.1em;
         font-size: 2em;
         right: 2%;
     }
