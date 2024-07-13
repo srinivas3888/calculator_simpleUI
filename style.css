@@ -92,7 +92,7 @@ body{
     scrollbar-width: none;
 }
 
-@media screen and (max-width:350px) {
+@media screen and (max-width:330px) {
     .row{
         gap: 0.15em;
     }
@@ -113,13 +113,13 @@ body{
 }
 
 /* For smaller mobile screens */
-@media screen and (max-width:383px) and (min-width:350px) {
+@media screen and (max-width:383px) and (min-width:330px) {
     .row{
         gap: 0.15em;
     }
     .btn{
         cursor: pointer;
-        width: 5em;
+        width: 4.89em;
         height: 3em;
         border-radius: 1.2em;
         font-size: 1em;
@@ -127,7 +127,7 @@ body{
     }
     #res{
         height: 7.1vh;
-        max-width: 11.4em;
+        max-width: 11.2em;
         font-size: 2em;
         right: 3%;
     }
@@ -140,7 +140,7 @@ body{
     }
     .btn{
         cursor: pointer;
-        min-width: 5.4em;
+        min-width: 5.3em;
         height: 3em;
         border-radius: 1.2em;
         font-size: 1em;
@@ -148,7 +148,7 @@ body{
     }
     #res{
         height: 7.6vh;
-        max-width: 12.1em;
+        max-width: 13em;
         font-size: 2em;
         right: 2%;
     }
